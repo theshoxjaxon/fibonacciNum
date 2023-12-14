@@ -1,14 +1,20 @@
-#include <stdio.h>
-int main()
-{
-    int Fibaonacci[15], i;
-    Fibaonacci[0] = 0;
-    Fibaonacci[1] = 1;
-    for(i = 2; i < 15; ++i){
-        Fibaonacci[i] = Fibaonacci[i - 2] + Fibaonacci[i - 1];
-    }
-    for(i = 0; i < 15; ++i){
-        printf("%i\n", Fibaonacci[i]);
-    }
+#include<stdio.h>
+
+float kmToMph(int k){
+    float mph = 1.609344;
+    float total =  k * mph;
+    return total;
+}
+
+
+
+int main() {
+    int distance;
+    printf("Please enter KM to calculate MPH: ");
+    scanf("%i", &distance);
+    float result = kmToMph(distance);
+    printf("There are %.2f miles in %i km", result, distance);
+
+
     return 0;
 }
